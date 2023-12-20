@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #navbar {
+      background-color: #333;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      transition: background-color 0.3s;
+      z-index: 1000;
+      top: 0;
+    }
+
+    #navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    #navbar a:hover {
+      color: orange; /* Change the color as desired on hover */
+    }
+
+    section {
+      height: 800px;
+      margin-top: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="navbar">
+  <a href="#section1">Section 1</a>
+  <a href="#section2">Section 2</a>
+  <a href="#section3">Section 3</a>
+</div>
+
+<section id="section1">
+  <h2>Section 1</h2>
+  <p>Scroll down to see the effect!</p>
+</section>
+
+<section id="section2">
+  <h2>Section 2</h2>
+  <p>Scroll down to see the effect!</p>
+</section>
+
+<section id="section3">
+  <h2>Section 3</h2>
+  <p>Scroll down to see the effect!</p>
+</section>
+
+<script>
+  var navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      navbar.style.backgroundColor = '#555'; // Change background color on scroll
+    } else {
+      navbar.style.backgroundColor = '#333'; // Revert to original color
+    }
+  });
+</script>
+
+</body>
+</html>
